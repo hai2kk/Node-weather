@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Weather app</title>
+  <link rel="icon" href="/img/weather.png" />
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+
+<body>
+  <div class="main-content">
+    {{>header}}
+    <p>Use this site to get your weather</p>
+    <form>
+      <input type="text" id="txtLocation" placeholder="Location">
+      <button>Search</button>
+      <div id="outputDiv">
+        {{#if temperatue.length}}
+        <p>It is {{temperatue}} degree celsius and {{description}} in {{address}},{{region}}. Feels like {{feelslike}}
+        </p>
+        {{/if}}
+      </div>
+    </form>
+  </div>
+  {{>footer}}
+
+  <script src="/js/app.js"></script>
+</body>
+
+</html>
