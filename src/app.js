@@ -28,7 +28,6 @@ app.get("/weather", (req, res) => {
 
   let weatherObj = {};
   getGeoCode(req.query.address, (error, { latitude, longitude }={}) => {
-    console.log(latitude + " -- " + longitude);
    
     if (error) {
       return res.send({ forecast: error });
